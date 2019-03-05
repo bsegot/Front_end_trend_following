@@ -1,0 +1,162 @@
+<head>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css">
+  <script src="https://unpkg.com/sweetalert/dist/sweetalert.min.js"></script>
+  <script src="linkers/connect_python_to_front.js"></script> <!-- contains the backend launcher-->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.6.0/Chart.min.js"></script>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.4.0/js/bootstrap.min.js"></script>
+
+  <script type="text/javascript">
+    window.onload = launch_backend();
+  </script>
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <style>
+  body {
+    font-family: "Lato", sans-serif;
+  }
+  
+  .sidenav {
+    width: 130px;
+    position: fixed;
+    z-index: 1;
+    top: 20px;
+    left: 10px;
+    background: #eee;
+    overflow-x: hidden;
+    padding: 8px 0;
+  }
+  
+  .sidenav a {
+    padding: 6px 8px 6px 16px;
+    text-decoration: none;
+    font-size: 15px;
+    color: #2196F3;
+    display: block;
+  }
+  
+  .sidenav a:hover {
+    color: #064579;
+  }
+  
+  .main {
+    margin-left: 140px; /* Same width as the sidebar + left position in px */
+    padding: 0px 10px;
+  }
+  
+  @media screen and (max-height: 450px) {
+    .sidenav {padding-top: 15px;}
+    .sidenav a {font-size: 18px;}
+  }
+  </style>
+
+
+</head>
+
+<body>
+
+
+  <div class="main">
+
+
+      <br>
+  <div class="sidenav">
+      <a id ="summary_front_page">Summary</a>
+      <a id ="positions_front_page">Positions</a>
+      <a id ="performances_front_page">Expected performances</a>
+      <a id ="about_front_page">About</a>
+    </div>
+
+
+
+    <div class="jumbotron">
+      <h1>Control panel</h1>
+      <h2>BYT#1</h2>
+      <p>multiple possibilities</p>
+    </div>
+  <br>
+
+
+
+    <label>Enter a ticker here to get the graph of the ticker (in progress)</label>
+    <input id="Ticker" type="text" placeholder="Ticker"/>
+    <button class="btn btn-success" onclick="some_function()">Go!</button>
+ 
+
+
+  <div class="container">
+
+      <p>Overview of the current normalized portfolio</p>
+      <canvas id="PortfolioChart"></canvas>
+
+      <!-- Tab panes 
+      /////////////////////////////////////////
+      /////////////////////////////////////////
+      /////////////////////////////////////////
+      -->
+
+
+      <div id = "picture_fun">
+          <img src="images/Yarol_picture.png"/>
+      </div>
+
+      <div id = "picture_returns">
+          <img src="images/expected_returns1.png"/>
+      </div>
+
+      <div class="container" id = "graph_content">
+          <h2>Dynamic Pills</h2>
+          <p>To make the tabs toggleabiv element with class .tab-content.</p>
+          <ul class="nav nav-pills" id = "ticker_tabs">
+          </ul>
+          <div class="tab-content"></div> <!--tab that holds the graphs-->
+      </div>
+
+
+      <div id = "picture_about">      
+      <h3>BYT details</h3>
+      <p id="myP">contact: XXXXX@gmail.com</p>
+      <img src="images/expected_returns1.png"/>
+      </div>
+
+
+      <!-- Tab panes 
+      /////////////////////////////////////////
+      /////////////////////////////////////////
+      /////////////////////////////////////////
+      -->
+
+      
+      <!--
+      <br>
+      <br>
+      <button id="randomizeData">Randomize Data</button>
+      <button id="addDataset">Add Dataset</button>
+      <button id="removeDataset">Remove Dataset</button>
+      <button id="addData">Add Data</button>
+      <button id="removeData">Remove Data</button>
+      <button id="add_data_backend_frontend_var">Add data of the backend to our front_end var</button>
+      -->
+
+  </div>
+
+
+  <script type="text/javascript" src="graph.js"></script> --> <!-- load the graph from the javascript file-->
+
+
+  </div>
+
+
+  
+  
+
+
+  
+
+  <body>
